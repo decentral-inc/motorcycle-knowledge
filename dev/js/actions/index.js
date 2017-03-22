@@ -7,7 +7,10 @@ export const selectUser = (user) => {
 };
 
 export const shuffleQuestions = (questions) => {
-	
+	return {
+		type: 'SHUFFLE_QUESTIONS',
+		payload: questions
+	}	
 }
 
 export const selectQuestion = (question) => {

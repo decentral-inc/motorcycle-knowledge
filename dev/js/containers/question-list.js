@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-// import {selectUser} from '../actions/index'
-
+import {shuffleQuestions} from '../actions/index'
 class QuestionList extends Component {
 	renderList() {
 		return this.props.questions.map((q) => {
@@ -16,10 +15,20 @@ class QuestionList extends Component {
 			)
 		})
 	}
+	renderButton () {
+		return (
+			<span>
+			<button onClick={() => this.props.shuffleQuestions(questions)}>
+					Shuffle
+			</button>
+			</span>
+		)
+	}
 	
 	render () {
 		return (
 			<div>
+				{this.renderButton()}
 				{this.renderList()}
 			</div>
 		)
@@ -31,5 +40,8 @@ function mapStateToProps(state) {
 		questions: state.questions
 	}
 }
+function matchDispatchToProps(dispatch){
+    return bindActionCreators({shuffleQuestions: shuffleQuestions}, dispatch);
+}
 
-export default connect(mapStateToProps)(QuestionList)
+export default connect(mapStateToProps,matchDispatchToProps)(QuestionList)

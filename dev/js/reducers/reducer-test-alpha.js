@@ -94,6 +94,7 @@ export default function () {
     return data.map((item,i) => ({
       content: item.q,
       id: 100+i,
+      section: 1,
       answers: item.a.map((ans,j) => ({
         isSolution: (j === item.sol),
         content: ans,
