@@ -2,7 +2,6 @@ import React from 'react';
 import UserList from '../containers/user-list';
 import UserDetails from '../containers/user-detail';
 import QuestionList from '../containers/question-list';
-import ShuffleButton from '../containers/shuffle-button';
 
 require('../../scss/style.scss');
 

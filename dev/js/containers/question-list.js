@@ -18,9 +18,10 @@ class QuestionList extends Component {
 	renderButton () {
 		return (
 			<span>
-			<button onClick={() => this.props.shuffleQuestions(questions)}>
+			<button onClick={() => this.props.shuffleQuestions(this.props.questions)}>
 					Shuffle
 			</button>
+			{this.renderList()}
 			</span>
 		)
 	}
@@ -29,7 +30,6 @@ class QuestionList extends Component {
 		return (
 			<div>
 				{this.renderButton()}
-				{this.renderList()}
 			</div>
 		)
 	}

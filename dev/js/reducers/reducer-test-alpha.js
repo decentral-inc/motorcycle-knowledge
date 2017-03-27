@@ -2,9 +2,35 @@
  * The users reducer will always return an array of users no matter what
  * You need to return something, so if there are no users then just return an empty array
  * */
+import {shuffle} from 'underscore';
 
-export default function () {
-    var data =  [{
+export default function (state=null,action) {
+    switch (action.type) {
+      case 'SHUFFLE_QUESTIONS':
+        var res =  shuffle(action.payload);
+        return res
+        break; 
+      default:
+        var data = getData()
+        return data.map((item,i) => ({
+          content: item.q,
+          id: 100+i,
+          section: 1,
+          answers: item.a.map((ans,j) => ({
+            isSolution: (j === item.sol),
+            content: ans,
+            id: (i+1) * (j+1) * 100*i + j
+          }))
+
+          
+        }))
+    }
+    
+    
+
+}
+function getData(){
+  return [{
       "q": "Vehicle/motorcycle collisions are most common: ",
       "a": [
         "At intersections",
@@ -91,17 +117,4 @@ export default function () {
       ],
       "sol": 0
     }]
-    return data.map((item,i) => ({
-      content: item.q,
-      id: 100+i,
-      section: 1,
-      answers: item.a.map((ans,j) => ({
-        isSolution: (j === item.sol),
-        content: ans,
-        id: (i+1) * (j+1) * 100*i + j
-      }))
-
-      
-    }))
-
 }
