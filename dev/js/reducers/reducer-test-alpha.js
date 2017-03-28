@@ -116,5 +116,117 @@ function getData(){
         "Speed up and get through the intersection quickly and then move left"
       ],
       "sol": 0
+    },{
+      "q": "In the picture below, riders A (top right rider, car on your right, car behind, car behind A) B (you) and C are riding as a group, To pass rider B should:",
+      "a": [
+        "Complete the pass in front of rider A",
+        "Return to the lane and ride next to rider A",
+        "Return to the right portion of the lane behind rider A"
+      ],
+      "sol": 2
+    },{
+      "q": "Following closely to a vehicle in front of you: ",
+      "a": [
+        "Protects you in heavy traffic",
+        "Helps you see hazards in the road",
+        "Is a factor in collisions caused by motorcyclists"
+      ],
+      "sol": 2
+    },{
+      "q": "Alcohol enters the bloodstream and quickly reaches the brain. Which of the following is affected first",
+      "a": [
+        "Speech",
+        "Balance",
+        "Judgment"
+      ],
+      "sol": 2
+    },{
+      "q": "Most collisions involve riders who",
+      "a": [
+        "Overbrake the rear tire",
+        "Underbrake the rear tire",
+        "Were expereienced riders"
+      ],
+      "sol": 0
+    },{
+      "q": "Make a special point to use mirrors when: ",
+      "a": [
+        "Riding through an intersection",
+        "Following a vehicle",
+        "Slowing or stopping"
+      ],
+      "sol": 2
+    },{
+      "q": "You plan to make a right turn after stopping at an intersection. Usually, it is best to turn from which position of the lane?",
+      "a": [
+        "The left portion",
+        "The center portion",
+        "The right portion"
+      ],
+      "sol": 1
+    },{
+      "q": "Not turning off a turn signal",
+      "a": [
+        "Encourages other drivers to pull into your path",
+        "Keeps other drivers from seeing your brake light",
+        "Reduces your chances of a collision because other drivers stay clear"
+      ],
+      "sol": 0
+    },{
+      "q": "When the front tire goes flat while riding: ",
+      "a": [
+        "Apply the rear brake and steer to the edge of the road",
+        "Steer to the right and apply both brakes",
+        "You will not be able to control the motorcycle"
+      ],
+      "sol": 0
+    },{
+      "q": "When you turn: ",
+      "a": [
+        "Keep your head and your eyes straight to maintain balance",
+        "Look through the turn to where you want to go",
+        "Always lean as the same angel as the motorcycle"
+      ],
+      "sol": 1
+    },{
+      "q": "Riding in the center portion of the lane",
+      "a": [
+        "Should be avoided if possible",
+        "Keeps other drivers from seeing you",
+        "Keeps others from sharing your lane"
+      ],
+      "sol": 2
+    },{
+      "q": "Wearing a helmet will",
+      "a": [
+        "Increase your chances of a head injury",
+        "Reduce your chances of a head injury",
+        "Neither reduce nor increase your chances of a head injury"
+      ],
+      "sol": 1
+    },{
+      "q": "To reduce speed before turning: ",
+      "a": [
+        "Close the throttle and apply the brakes",
+        "Pull in the clutch and use both brakes",
+        "Apply the rear brake only"
+      ],
+      "sol": 0
+    },{
+      "q": "To operate the throttle",
+      "a": [
+        "Start with your wrist flat",
+        "Sit forward with your arms straight",
+        "Twist it forward and down for more power"
+      ],
+      "sol": 0
+    },{
+      "q": "When carrying loads",
+      "a": [
+        "Keep the load low and as far forward as possible",
+        "Keep the load to the rear of the motorcycle",
+        "Fasten the load against the frame on the back of the seat"
+      ],
+      "sol": 0
     }]
 }
