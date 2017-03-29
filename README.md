@@ -1,8 +1,12 @@
-![](http://i.imgur.com/DUiL9yn.png)
-
 # React/Sass/Redux Boilerplate
 
-Boilerplate and guide for a React/Sass/Redux build.
+Boilerplate and guide for a React/Sass/Redux build creating an online practice app for the Motorcycle Permit Test.
+
+# Demo  
+
+http://54.202.23.182/
+
+![](http://i.imgur.com/DUiL9yn.png)
 
 ## Getting Started
 
