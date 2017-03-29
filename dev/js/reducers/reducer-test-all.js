@@ -348,5 +348,85 @@ function beta(){
 	    "Increase your speed and stay in the center"
 	  ],
 	  "sol": 1
-	}]
+	},{
+    "q": "When you ride at night: ",
+    "a": [
+      "Wear reflective clothing",
+      "Always ride in the center lane position",
+      "Follow the vehicle ahead more closely for safety"
+    ],
+    "sol": 0
+  },{
+    "q": "While riding an unfamiliar motorcycle",
+    "a": [
+      "Stay in the right portion of the lane",
+      "Allow extra room for stopping",
+      "Do not shift above third gear"
+    ],
+    "sol": 1
+  },{
+    "q": "To make good judgments in traffic, you need to be able to:",
+    "a": [
+      "Be able to swerve",
+      "Know how to stop quickly",
+      "Search ahead"
+    ],
+    "sol": 2
+  },{
+    "q": "For higher speed turns you should: ",
+    "a": [
+      "Lean more than you would at low speeds",
+      "Lean less than you would at low speeds",
+      "Lean the same ammount as you would at low speeds"
+    ],
+    "sol": 0
+  },{
+    "q": "In the picture below (you are merging onto a freeway with a car to your right in the merge lane) the light to make yourself more noticeable is the: ",
+    "a": [
+      "Brake light",
+      "Tail light",
+      "Turn signal"
+    ],
+    "sol": 2    
+  },{
+    "q": "The driver pictured (at 4 way traffic light stop, car in north left turn lane is making a U-turn. You are in the middle lane in the south intersection going northbound and you are about to go straight) turning left is not stopping, your best chance to avoid a collision is to: ",
+    "a": [
+      "Maintain your position and brake hard",
+      "Slow and swerve to the left",
+      "Reduce your speed and move away from the vehicle"
+    ],
+    "sol": 2
+  },{
+    "q": "When adjusting the mirrors to carry a passenger, the passenger should: ",
+    "a": [
+      "Sit on the seat with you",
+      "Stand behind the motorcycle",
+      "Adjust the mirror while you sit on the motorcycle"
+    ],
+    "sol": 0
+  },{
+    "q": "If you lock the front tire while stopping",
+    "a": [
+      "Release the rear brake",
+      "Keep the front brake lock until stopped",
+      "Release and re-apply the fronts brake"
+    ],
+    "sol": 2
+  },{
+    "q": "To avoid causing a rear end collision when following another vehicle",
+    "a": [
+      "Ride in the right wheel track",
+      "Stay at least 2 seconds behind",
+      "Tap your breaks lightly"
+    ],
+    "sol": 1
+  },{
+    "q": "When you turn, you should",
+    "a": [
+      "Look through the turn",
+      "Watch the center line",
+      "Look straight ahead"
+    ],
+    "sol": 0
+  }]
 }
