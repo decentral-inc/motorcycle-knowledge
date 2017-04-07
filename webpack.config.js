@@ -9,6 +9,7 @@ module.exports = {
     },
     devtool: 'cheap-module-eval-source-map',
     entry: './dev/js/index.js',
+    debug: true,
     module: {
         loaders: [
             {

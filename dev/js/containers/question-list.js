@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {shuffleQuestions} from '../actions/index'
+import {shuffleQuestions} from '../actions/index';
+import {checkAnswer} from '../actions/index';
 import ListItem from 'material-ui/List/ListItem';
+import UnCheckedIcon from 'material-ui/svg-icons/toggle/check-box-outline-blank';
+import CheckedIcon from 'material-ui/svg-icons/toggle/check-box'
 
 import List from 'material-ui/List';
 import Checkbox from 'material-ui/Checkbox';
@@ -12,9 +15,17 @@ const styles = {
     overflowY: 'auto'
 }
 
+
 class QuestionList extends Component {
-	checkAnswer(ans) {
-    console.log("checking: ",ans)
+	handleCompleteStyle(correct) {
+		if (typeof correct === 'undefined'){
+			return
+		}
+    if(!correct){
+      return {color: "red", textDecoration: "line-through"};
+    }else {
+    	return {color: "green"};
+    }
   }
 
 	renderList() {
@@ -30,30 +41,34 @@ class QuestionList extends Component {
 				    />
 						<List>
 							<ListItem
+								style={this.handleCompleteStyle(q.answers[0].correct)}
 								leftCheckbox={
 			              <Checkbox 
 			                  checked={q.answers[0].correct} 
-			                  onCheck={() => this.checkAnswer(q.answers[0])}
+			                  onCheck={() => this.props.checkAnswer(q.id,q.answers[0],
+			                  	this.props.questions)}
 			              />
 			          }
 								key={q.answers[0].id}          
 								primaryText={q.answers[0].content} 
 							/>
 							<ListItem
+								style={this.handleCompleteStyle(q.answers[1].correct)}
 								leftCheckbox={
 			              <Checkbox 
 			                  checked={q.answers[1].correct} 
-			                  onCheck={() => this.checkAnswer(q.answers[1])}
+			                  onCheck={() => this.props.checkAnswer(q.id,q.answers[1],this.props.questions)}/*q.id,q.answers[1].id*/
 			              />
 			          }
 								key={q.answers[1].id}        
 								primaryText={q.answers[1].content} 
 							/>
 							<ListItem
+								style={this.handleCompleteStyle(q.answers[2].correct)}
 								leftCheckbox={
 			              <Checkbox 
 			                  checked={q.answers[2].correct} 
-			                  onCheck={() => this.checkAnswer(q.answers[2])}
+			                  onCheck={() => this.props.checkAnswer(q.id,q.answers[2],this.props.questions)}
 			              />
 			          }
 								key={q.answers[2].id}       
@@ -93,7 +108,10 @@ function mapStateToProps(state) {
 	}
 }
 function matchDispatchToProps(dispatch){
-    return bindActionCreators({shuffleQuestions: shuffleQuestions}, dispatch);
+    return bindActionCreators({
+    	checkAnswer: checkAnswer,
+    	shuffleQuestions: shuffleQuestions
+    }, dispatch);
 }
 
 export default connect(mapStateToProps,matchDispatchToProps)(QuestionList)

@@ -11,7 +11,18 @@ export const shuffleQuestions = (questions) => {
 		type: 'SHUFFLE_QUESTIONS',
 		payload: questions
 	}	
-}
+};
+
+export const checkAnswer = (qid,answer,questions) => {
+  return {
+    type: 'CHECK_ANSWER',
+    payload: {
+      qid:qid,
+      answer:answer,
+      questions: questions
+    }
+  }
+};
 
 export const selectQuestion = (question) => {
 	console.log("You clicked on question: ",question);

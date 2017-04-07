@@ -3,7 +3,6 @@
 	into one more tailored for react, i.e. give it ids
 */
 import {shuffle} from 'underscore';
-
 export default function (state = null,action) {
 	var part_one = alpha().map(a => { a.section = 1;return a})
 	var part_two = beta().map(b => {b.section = 2; return b})
@@ -12,6 +11,19 @@ export default function (state = null,action) {
 		case 'SHUFFLE_QUESTIONS':
 			return   shuffle(action.payload);
       break;
+    case 'CHECK_ANSWER':
+      return state.map(q => {
+        if (q.id === action.payload.qid){
+          q.answers = q.answers.map(a => {
+            if (a.id === action.payload.answer.id){
+              a.correct = action.payload.answer.isSolution  
+            }
+            return a
+          })
+        }
+        return q
+      })
+      break;
 		default:
       return all.map((item,i) => ({
         content: item.q,
@@ -19,7 +31,8 @@ export default function (state = null,action) {
         answers: item.a.map((ans,j) => ({
           isSolution: (j === item.sol),
           content: ans,
-          id: (i+1) * (j+1) * 100*i + j
+          id: (i+1) * (j+1) * 100*i + j,
+          correct: undefined
         }))
       }))
 	}
