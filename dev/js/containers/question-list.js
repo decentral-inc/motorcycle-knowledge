@@ -94,7 +94,7 @@ class QuestionList extends Component {
 	
 	render () {
 		return (
-			<div>
+			<div className="quiz-page">
 				{this.renderButton()}
 				{this.renderList()}
 			</div>
