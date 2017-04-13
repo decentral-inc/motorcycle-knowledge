@@ -102,7 +102,8 @@ function alpha(){
       "Only for normal stops",
       "Only for emergency stops",
       "Every time you slow or stop"
-    ]
+    ],
+    "sol": 2
   },{
     "q": "When riding with a passenger, you should: ",
     "a": [
@@ -117,7 +118,8 @@ function alpha(){
       "Always brake before swerving",
       "Swerve in the direction of the hazard",
       "Separate braking from swerving"
-    ]
+    ],
+    "sol": 2
   },{
     "q": "In the picture below, (4 way intersection top down view, you are in south stop right lane, other driver is at north stop left lane) the car driver is preparing to enter the intersection. To be seen and maintain a space cushion, you should:",
     "a": [

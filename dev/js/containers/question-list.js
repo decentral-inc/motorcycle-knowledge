@@ -10,6 +10,8 @@ import CheckedIcon from 'material-ui/svg-icons/toggle/check-box'
 import List from 'material-ui/List';
 import Checkbox from 'material-ui/Checkbox';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Helmet} from "react-helmet";
+
 
 const styles = {
     overflowY: 'auto'
@@ -95,6 +97,9 @@ class QuestionList extends Component {
 	render () {
 		return (
 			<div className="quiz-page">
+				<Helmet>
+           <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        </Helmet>
 				{this.renderButton()}
 				{this.renderList()}
 			</div>
