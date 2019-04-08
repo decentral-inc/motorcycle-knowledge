@@ -1,12 +1,12 @@
 # React/Sass/Redux Boilerplate
 
-Boilerplate and guide for a React/Sass/Redux build creating an online practice app for the Motorcycle Permit Test.
+2019 Cali Motorcycle Knowledge Test
 
 # Demo  
 
-http://54.202.23.182/
+https://onchainrider.com  
+  
 
-![](http://i.imgur.com/DUiL9yn.png)
 
 ## Getting Started
 
